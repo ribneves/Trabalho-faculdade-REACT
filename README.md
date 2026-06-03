@@ -82,6 +82,3 @@ O site é totalmente responsivo, adaptando-se a dispositivos móveis (até 480px
 
 Este projeto é de uso educacional e não possui licença específica.
 
-## Link do projeto original (HTML/CSS)
-
-https://ribneves.github.io/Trabalho-Faculdade/
