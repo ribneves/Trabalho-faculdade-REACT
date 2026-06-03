@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    background-image: url('/img/Logo.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+nav a.ativo {
+    color: #ffcc00;
+}
+
+.destaque {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.noticia {
+    width: 100%;
+    max-width: 1000px;
+    background: transparent;
+    padding: 15px;
+    margin: 20px auto;
+}
+
+.noticia h2 {
+    margin-bottom: 15px;
+}
+
+.noticia-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.noticia-card h3 {
+    margin-top: 0;
+}
+
+.veiculos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.veiculo-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.veiculo-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .destaque {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .noticia {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .veiculos {
+        justify-content: center;
+    }
+
+    .veiculo-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0;
+        height: 100px;
+    }
+
+    .veiculo-card {
+        padding: 10px;
+    }
+
+    .veiculo-card img {
+        height: 120px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.admin-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.admin-form {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.admin-form h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.admin-form button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.admin-form button:hover {
+    background: #555;
+}
+
+.btn-cancelar {
+    background: #888 !important;
+    margin-left: 8px;
+}
+
+.admin-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.admin-tabela th {
+    background: #333;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-tabela td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-tabela tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-editar {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.btn-editar:hover {
+    background: #666;
+}
+
+.btn-excluir {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-excluir:hover {
+    background: #e74c3c;
+}
+
+.garagem-total {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.btn-remover {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.btn-remover:hover {
+    background: #e74c3c;
+}
+
+.btn-adicionar {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-adicionar:hover {
+    background: #555;
+    color: #ffcc00;
+}
+
+.contato-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.contato-container button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.contato-container button:hover {
+    background: #555;
+}
+
+.mensagem-sucesso {
+    background: #2ecc71;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.garagem-vazia {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
